@@ -13,7 +13,7 @@ User.destroy_all
 Recipe.destroy_all
 Rating.destroy_all
 
-category = ["appetizer", "entre", "salads", "desserts"]
+category = ["appetizers", "entrees", "salads", "desserts"]
 
 
 60.times do
@@ -26,7 +26,7 @@ category = ["appetizer", "entre", "salads", "desserts"]
     })
 end
 
-10.times do
+40.times do
   user = User.all.sample
   user.recipes.create({
     name: Faker::StarWars.character,
@@ -48,11 +48,3 @@ end
     recipe_id: recipe.id
     })
 end
-
-
-
-
-
-
-
-
