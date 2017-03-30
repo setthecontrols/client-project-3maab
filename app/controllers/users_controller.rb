@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include SessionsHelper
   def index
     @user = User.all
   end
@@ -10,7 +11,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
-        session[:user_id] = @user.id
+        login
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
