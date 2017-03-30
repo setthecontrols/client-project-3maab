@@ -2,8 +2,8 @@ class CreateRatings < ActiveRecord::Migration[5.0]
   def change
     create_table :ratings do |t|
       t.integer :value
-      t.references :user, foreign_key: true
-      t.references :recipe, foreign_key: true
+      t.references :user
+      t.references :recipe
 
       t.timestamps
     end
