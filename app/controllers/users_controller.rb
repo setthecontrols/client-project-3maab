@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  include SessionsHelper
+
   def index
     @user = User.all
   end
@@ -22,7 +25,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(current_user.id)
+    @recipes = @user.recipes
+    # redirect '/users/#{@user.id}'
   end
 
   def update

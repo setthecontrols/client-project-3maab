@@ -1,13 +1,11 @@
 class SessionsController < ApplicationController
 
   def new
-  
+
   end
 
   def create
-    p "@" * 50
     @user = User.find_by_email(params[:session][:email])
-    p @user
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
       flash.notice = "Welcome back '#{@user.username}'!!!"
@@ -23,7 +21,7 @@ class SessionsController < ApplicationController
     redirect_to '/'
   end
 
-  private 
+  private
 
     def session_params
       params.require(:user).permit(:email, :password)
