@@ -49,7 +49,4 @@ ActiveRecord::Schema.define(version: 20170329223559) do
     t.datetime "updated_at",                      null: false
   end
 
-  add_foreign_key "ratings", "recipes"
-  add_foreign_key "ratings", "users"
-  add_foreign_key "recipes", "users"
 end
