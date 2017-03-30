@@ -1,5 +1,38 @@
 <<<<<<< HEAD
+<center>
+<h1 class="menu-welcom">Welcome to ME/NU, where our community picks their menu. </h1>
+
+
+</center>
+
+<h3>How it works - (blurb about voting on menu items. )</h3>
+<center>
+<h4>Here are next week's menu candidates.  Please log in to vote!</h4>
+</center>
+
+<div class="welcome-page-top-recipes entrees">
+  <% @entrees.each do |entree|%>
+    <p> Dish: <%= entree.name %></p>
+    <p>Ingredients <%= entree.ingredients %></p>
+    <p>Difficutly <%= entree.difficulty %></p>
+    <p>Prep Time: <%= entree.prep_time %></p>
+    <p>Instructions: <%= entree.instructions %></p>
+  <% end %>
+</div>
+
+
+<div class="welcome-page-top-recipes desserts">
+
+</div>
+
+
+<div class="welcome-page-top-recipes appetizers">
+
+</div>
+=======
+<<<<<<< HEAD
 %h1 Hello
 =======
 <h1>Welcome to ME/NU</h1>
 >>>>>>> 048e167d413dada36fb5b0df219e4c047f8f6061
+>>>>>>> 6b899f008e9cd6602917be129d709564590afe49

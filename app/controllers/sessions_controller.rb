@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
-
+include SessionsHelper
   def new
-  
+
   end
 
   def create
@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
     redirect_to '/'
   end
 
-  private 
+  private
 
     def session_params
       params.require(:user).permit(:email, :password)
