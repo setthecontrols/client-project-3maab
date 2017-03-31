@@ -6,6 +6,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = link_to "Home", root_path
+    = link_to "Menu", menus_path
     - if logged_in? == false
       = link_to "Register", new_user_path
       = link_to "Login", new_session_path

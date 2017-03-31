@@ -11,20 +11,49 @@
 
 <div class="welcome-page-top-recipes entrees">
   <% @entrees.each do |entree|%>
-    <p> Dish: <%= entree.name %></p>
-    <p>Ingredients <%= entree.ingredients %></p>
+    <p> Dish: <%= link_to entree.name, recipe %></p>
+<!--     <p>Ingredients <%= entree.ingredients %></p>
     <p>Difficutly <%= entree.difficulty %></p>
     <p>Prep Time: <%= entree.prep_time %></p>
-    <p>Instructions: <%= entree.instructions %></p>
+    <p>Instructions: <%= entree.instructions %></p> -->
+
+  <% end %>
+</div>
+
+<div class="welcome-page-top-recipes desserts">
+  <% @desserts.each do |dessert|%>
+    <p> Dish: <%= dessert.name %></p>
+<!--     <p>Ingredients <%= dessert.ingredients %></p>
+    <p>Difficutly <%= dessert.difficulty %></p>
+    <p>Prep Time: <%= dessert.prep_time %></p>
+    <p>Instructions: <%= dessert.instructions %></p> -->
   <% end %>
 </div>
 
 
-<div class="welcome-page-top-recipes desserts">
-
-</div>
-
-
 <div class="welcome-page-top-recipes appetizers">
-
+  <% @entrees.each do |entree|%>
+    <p> Dish: <%= entree.name %></p>
+<!--     <p>Ingredients <%= entree.ingredients %></p>
+    <p>Difficutly <%= entree.difficulty %></p>
+    <p>Prep Time: <%= entree.prep_time %></p>
+    <p>Instructions: <%= entree.instructions %></p> -->
+  <% end %>
 </div>
+
+<div class="welcome-page-top-recipes salads">
+  <% @salads.each do |salad|%>
+    <p> Dish: <%= salad.name %></p>
+<!--     <p>Ingredients <%= salad.ingredients %></p>
+    <p>Difficutly <%= salad.difficulty %></p>
+    <p>Prep Time: <%= salad.prep_time %></p>
+    <p>Instructions: <%= salad.instructions %></p> -->
+  <% end %>
+</div>
+
+
+
+
+
+
+
