@@ -6,23 +6,9 @@
 
 <h2>Recipes</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% @recipes.each do |recipe| %>
+    <ol>
+      <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+    </ol>
+  <% end %>
 
- <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.name %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
