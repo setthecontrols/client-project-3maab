@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
   def home
-    @entrees = Recipe.all.where(category: "entre")
+    @entrees = Recipe.where(category: "entre").last(5)
+    @appetizers = Recipe.where(category: "appetizers").last(5)
+    @salads = Recipe.where(category: "salads").last(5)
+    @desserts = Recipe.where(category: "desserts").last(5)
   end
 end
