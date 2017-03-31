@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-  def index
+  def show
     @recipes = Recipe.all
     @appetizers = Recipe.where(category: "appetizers")
     @entrees = Recipe.where(category: "entrees")
