@@ -1,12 +1,18 @@
 class MenusController < ApplicationController
+
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.generate_menu
     @appetizers = Recipe.where(category: "appetizers")
     @entrees = Recipe.where(category: "entrees")
     @salads = Recipe.where(category: "salads")
     @desserts = Recipe.where(category: "desserts")
   end
+
+  def new
+
+  end
 end
+
 
 
 # private
@@ -21,10 +27,8 @@ end
 #   end
 #   @top_5 = @totals.sort.last(5)
 #   @top_5_apps = @appetizers.where(@totals.include? @top_5)
-  
+
 #   # @top_5_apps.each do |appetizer|
 #   #   return appetizer.name
 #   # end
 # end
-
-
