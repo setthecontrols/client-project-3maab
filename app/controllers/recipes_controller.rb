@@ -7,7 +7,12 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-  end
+
+    respond_to do |format|
+      format.html { render :show}
+      format.js { render :index }
+      end
+    end
 
   def new
     @recipe = Recipe.new
@@ -65,7 +70,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-     params.require(:recipe).permit(:name, :ingredients, :difficulty, :prep_time, :category, :instructions, :image)
+     params.require(:recipe).permit(:name, :ingredients, :difficulty, :prep_time, :category, :instructions)
   end
 
 end

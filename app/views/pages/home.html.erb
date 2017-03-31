@@ -12,7 +12,7 @@
 <h4>Entrees</h4>
 <div class="welcome-page-top-recipes entrees">
   <% @entrees.each do |entree|%>
-    <p> Dish: <%= entree.name %></p>
+    <p> Dish: <%= link_to entree.name, entree, :remote => true %></p>
 <!--     <p>Ingredients <%= entree.ingredients %></p>
     <p>Difficutly <%= entree.difficulty %></p>
     <p>Prep Time: <%= entree.prep_time %></p>
@@ -24,7 +24,7 @@
 <h4>Desserts</h4>
 <div class="welcome-page-top-recipes desserts">
   <% @desserts.each do |dessert|%>
-    <p> Dish: <%= dessert.name %></p>
+    <p> Dish: <%= link_to dessert.name, dessert, :remote => true %></p>
 <!--     <p>Ingredients <%= dessert.ingredients %></p>
     <p>Difficutly <%= dessert.difficulty %></p>
     <p>Prep Time: <%= dessert.prep_time %></p>
@@ -35,7 +35,7 @@
 <h4>Appetizers</h4>
 <div class="welcome-page-top-recipes appetizers">
   <% @appetizers.each do |appetizer|%>
-    <p> Dish: <%= appetizer.name %></p>
+    <p class="pickles"> Dish: <%= link_to appetizer.name, appetizer, :remote => true %></p>
 <!--     <p>Ingredients <%= appetizer.ingredients %></p>
     <p>Difficutly <%= appetizer.difficulty %></p>
     <p>Prep Time: <%= appetizer.prep_time %></p>
@@ -46,7 +46,7 @@
 <h4>Salads</h4>
 <div class="welcome-page-top-recipes salads">
   <% @salads.each do |salad|%>
-    <p> Dish: <%= salad.name %></p>
+    <p> Dish: <%= link_to salad.name, salad, :remote => true %></p>
 <!--     <p>Ingredients <%= salad.ingredients %></p>
     <p>Difficutly <%= salad.difficulty %></p>
     <p>Prep Time: <%= salad.prep_time %></p>
