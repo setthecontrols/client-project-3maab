@@ -12,3 +12,6 @@
     </ol>
   <% end %>
 
+  <% if current_user && current_user.admin = true %>
+    <%= link_to "Generate Weekly menue", '/'  %>
+  <% end %>
