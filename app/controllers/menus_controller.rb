@@ -9,12 +9,22 @@ class MenusController < ApplicationController
 end
 
 
-private
+# private
 
-def rating_total
-  @appetizers.each do |appetizer|
-    app_ratings = appetizer.ratings
-    total = app_ratings.reduce(0) { |sum, rating| sum += rating.value }
-    return total
-  end
-end
+
+# def app_rating_total
+#   @totals = []
+#   @appetizers.each do |appetizer|
+#     app_ratings = appetizer.ratings
+#     total = app_ratings.reduce(0) { |sum, rating| sum += rating.value }
+#     @totals << total
+#   end
+#   @top_5 = @totals.sort.last(5)
+#   @top_5_apps = @appetizers.where(@totals.include? @top_5)
+  
+#   # @top_5_apps.each do |appetizer|
+#   #   return appetizer.name
+#   # end
+# end
+
+

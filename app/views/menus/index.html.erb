@@ -1,0 +1,33 @@
+<h1>Here is the Weekly Menu</h1>
+
+<h3>Appetizers</h3>
+<ul>
+<% @appetizers.each do |appetizer| %>
+  <%= appetizer.name %>
+  <% @ratings = appetizer.ratings %>
+  <% @total = @ratings.reduce(0) { |sum, rating| sum += rating.value } %>
+  <%= @total %><br>
+<% end %>
+
+</ul>
+
+<h3>Salads</h3>
+<ul>
+<% @salads.each do |salad| %>
+  <%= salad.name %><br>
+<% end %>
+</ul>
+
+<h3>Entrees</h3>
+<ul>
+<% @entrees.each do |entree| %>
+  <%= entree.name %><br>
+<% end %>
+</ul>
+
+<h3>Desserts</h3>
+<ul>
+<% @desserts.each do |dessert| %>
+  <%= dessert.name %><br>
+<% end %>
+</ul>
