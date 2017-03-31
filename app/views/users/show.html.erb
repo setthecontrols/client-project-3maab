@@ -2,6 +2,7 @@
   <strong>Welcome, <%= @user.username %> </strong>
 </p>
 
+  <p><%= link_to 'Create New Entry', new_recipe_path(@recipe) %></p>
 
 <h2>Recipes</h2>
 
@@ -18,7 +19,6 @@
       <tr>
         <td><%= recipe.name %></td>
         <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
         <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
