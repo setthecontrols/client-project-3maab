@@ -12,7 +12,7 @@
 <h4>Entrees</h4>
 <div class="welcome-page-top-recipes entrees">
   <% @entrees.each do |entree|%>
-    <p> Dish: <%= link_to entree.name, entree, :remote => true %></p>
+    <p> Dish: <%= link_to entree.name, entree%></p>
 <!--     <p>Ingredients <%= entree.ingredients %></p>
     <p>Difficutly <%= entree.difficulty %></p>
     <p>Prep Time: <%= entree.prep_time %></p>

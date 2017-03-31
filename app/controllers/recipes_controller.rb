@@ -12,7 +12,6 @@ class RecipesController < ApplicationController
     respond_to do |format|
       format.html { render :show}
       format.js { render :index }
-      end
     end
   end
 
