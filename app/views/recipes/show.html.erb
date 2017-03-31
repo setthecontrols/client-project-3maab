@@ -3,16 +3,24 @@
 <br>
 <h1><%= @recipe.name %></h1>
 <br>
-<p>Difficulty Level: <%= @recipe.difficulty %></p>
+<p>Difficulty Level (1 being the easiest and 10 being the most difficult):<br> <%= @recipe.difficulty %></p>
 <br>
-<p>Prep Time: <%= @recipe.prep_time %></p>
+<p>Prep Time:<br> <%= @recipe.prep_time %> minutes</p>
 <br>
-<p>Type: <%= @recipe.category %></p>
+<p>Type:<br> <%= @recipe.category %></p>
 <br>
-<p>Ingredients: <%= @recipe.ingredients %></p>
+<p>Ingredients:<br> <%= @recipe.ingredients %></p>
 <br>
-<p>Instructions: <%= @recipe.instructions %></p>
+<p>Instructions:<br> <%= @recipe.instructions %></p>
 <br>
 
+
+<p>Rate this Recipe:</p>
+<%= link_to "YES", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 5), :method => :post %><br>
+<%= link_to "Sure", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 4), :method => :post %><br>
+<%= link_to "Maybe?", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 3), :method => :post %><br>
+<%= link_to "No", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 2), :method => :post %><br>
+<%= link_to "YUCK", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 1), :method => :post %><br><br>
 
 <%= link_to "<< Back to Recipes List", recipes_path %>
+

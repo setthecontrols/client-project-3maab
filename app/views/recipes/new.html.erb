@@ -1,16 +1,16 @@
 <h2>Add a New Recipe</h2>
-
+<br>
 <%= form_for(@recipe) do |f| %>
   <%= f.label :name %><br>
   <%= f.text_field(:name) %><br>
-  <%= f.label :ingredients %><br>
-  <%= f.text_area(:ingredients) %><br>
-  <%= f.label :difficulty %><br>
-  <%= f.text_field(:difficulty) %><br>
-  <%= f.label :prep_time %><br>
-  <%= f.text_field(:prep_time) %><br>
   <%= f.label :category %><br>
-  <%= f.text_field(:category) %><br>
+  <%= f.select :category, ['appetizers', 'salads', 'entrees', 'desserts']%><br>
+  <%= f.label :ingredients %> - please include the proper amount and/or measurements<br>
+  <%= f.text_area(:ingredients) %><br>
+  <%= f.label :difficulty %> Level - 1 being the easiest and 10 being the most difficult<br>
+  <%= f.select :difficulty, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]%><br>
+  <%= f.label :prep_time %> (in minutes)<br>
+  <%= f.text_field(:prep_time) %><br>
   <%= f.label :instructions %><br>
   <%= f.text_area(:instructions)%><br>
   <%= f.label :image %><br>
