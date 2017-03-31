@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       login
       flash.notice = "Thanks for registering '#{@user.username}'!!!!"
-      redirect_to recipes_path
+      redirect_to @user
     else
       flash.notice = "We were unable to sign you up... please try again."
       redirect_to '/users/new'
