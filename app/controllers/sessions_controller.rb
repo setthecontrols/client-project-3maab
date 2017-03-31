@@ -5,13 +5,12 @@ include SessionsHelper
   end
 
   def create
-    p "@" * 50
     @user = User.find_by_email(params[:session][:email])
-    p @user
+    @recipes = @user.recipes
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
       flash.notice = "Welcome back '#{@user.username}'!!!"
-      redirect_to '/'
+      render 'users/show'
     else
       flash.notice = "Login failed....please try again."
       redirect_to '/login'
