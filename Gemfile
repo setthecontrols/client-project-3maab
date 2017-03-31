@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'haml'
 
-# gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 # gem 'autoprefixer-rails'
 
 # Use Capistrano for deployment
