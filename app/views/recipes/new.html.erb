@@ -1,7 +1,8 @@
+<div class="container">
 <h2>Add a New Recipe</h2>
 <br>
 <%= form_for(@recipe) do |f| %>
-  <%= f.label :name %><br>
+  <%= f.label :recipe_name %><br>
   <%= f.text_field(:name) %><br>
   <%= f.label :category %><br>
   <%= f.select :category, ['appetizers', 'salads', 'entrees', 'desserts']%><br>
@@ -15,5 +16,6 @@
   <%= f.text_area(:instructions)%><br>
   <%= f.label :image %><br>
   <%= f.file_field(:image) %><br><br>
-  <%= f.submit %>
+  <%= f.submit 'Create Recipe', :class => "waves-effect waves-light btn-large" %>
 <% end %>
+</div>

@@ -1,3 +1,4 @@
+<div class="container">
 <h1>All Recipes</h1>
 <br>
 <div id = "appetizers">
@@ -26,4 +27,5 @@
 <% @desserts.each do |recipe| %>
   <%= link_to recipe.name, recipe_path(recipe) %><br>
 <% end %>
+</div>
 </div>

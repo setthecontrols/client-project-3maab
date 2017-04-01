@@ -1,6 +1,8 @@
+<div class="container">
 <h1>Weekly Menu</h1>
-
-<h3>Appetizers</h3>
+<div class="row">
+  <div class="col s3">
+<h5>Appetizers</h5>
 <ul>
 <% @appetizers.first(5).each do |appetizer| %>
   <%= appetizer.name %>
@@ -8,26 +10,30 @@
   <% @total = @ratings.reduce(0) { |sum, rating| sum += rating.value } %>
   <% @total %><br>
 <% end %>
-
 </ul>
-
-<h3>Salads</h3>
+</div>
+  <div class="col s3">
+<h5>Salads</h5>
 <ul>
 <% @salads.first(5).each do |salad| %>
   <%= salad.name %><br>
 <% end %>
 </ul>
-
-<h3>Entrees</h3>
+</div>
+  <div class="col s3">
+<h5>Entrees</h5>
 <ul>
 <% @entrees.first(5).each do |entree| %>
   <%= entree.name %><br>
 <% end %>
 </ul>
-
-<h3>Desserts</h3>
+</div>
+  <div class="col s3">
+<h5>Desserts</h5>
 <ul>
 <% @desserts.first(5).each do |dessert| %>
   <%= dessert.name %><br>
 <% end %>
 </ul>
+</div>
+</div>

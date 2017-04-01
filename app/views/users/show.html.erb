@@ -1,16 +1,16 @@
-<p>
-  <strong>Welcome, <%= @user.username %> </strong>
-</p>
+<div class="container">
+  <h1>Welcome, <%= @user.username %>!</h1>
 
-  <p><%= link_to 'Create New Entry', new_recipe_path(@recipe) %></p>
+  <p>Click <%= link_to 'here', new_recipe_path(@recipe) %> to create a new recipe</p>
 
-<h2>Recipes</h2>
-
-  <% @recipes.each do |recipe| %>
+  <h3>Recipes</h3>
     <ol>
-      <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+      <% @recipes.each do |recipe| %>
+        <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+      <% end %>
     </ol>
   <% end %>
 
   <% if current_user && current_user.admin = true %>
   <% end %>
+  </div>
