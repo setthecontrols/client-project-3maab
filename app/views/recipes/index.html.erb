@@ -1,5 +1,29 @@
-<h1>Recipes</h1>
-
-<% @recipes.each do |recipe| %>
-  <%= link_to recipe.name, recipe_path(recipe) %>
+<h1>All Recipes</h1>
+<br>
+<div id = "appetizers">
+<h3>Appetizers</h3>
+<% @appetizers.each do |recipe| %>
+  <%= link_to recipe.name, recipe_path(recipe) %><br>
 <% end %>
+<br><br>
+</div>
+<div id = "salads">
+<h3>Salads</h3>
+<% @salads.each do |recipe| %>
+  <%= link_to recipe.name, recipe_path(recipe) %><br>
+<% end %>
+<br><br>
+</div>
+<div id = "entrees">
+<h3>Entrees</h3>
+<% @entrees.each do |recipe| %>
+  <%= link_to recipe.name, recipe_path(recipe) %><br>
+<% end %>
+<br><br>
+</div>
+<div id = "desserts">
+<h3>Desserts</h3>
+<% @desserts.each do |recipe| %>
+  <%= link_to recipe.name, recipe_path(recipe) %><br>
+<% end %>
+</div>
