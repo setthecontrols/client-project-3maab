@@ -15,7 +15,7 @@ class RatingsController < ApplicationController
       flash.notice = "You're rating is recorded!"
     end
 
-    redirect_to "/recipes"
+    redirect_to "/"
   end
 
 end
