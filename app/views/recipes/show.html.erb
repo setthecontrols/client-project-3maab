@@ -1,15 +1,15 @@
-<h1><%= @recipe.name %></h1>
-<br>
-<p>Difficulty Level: <%= @recipe.difficulty %></p>
-<br>
-<p>Prep Time: <%= @recipe.prep_time %></p>
-<br>
-<p>Type: <%= @recipe.category %></p>
-<br>
-<p>Ingredients: <%= @recipe.ingredients %></p>
-<br>
-<p>Instructions: <%= @recipe.instructions %></p>
-<br>
-
-
-<%= link_to "<< Back to Recipes List", recipes_path %>
+<div class="container">
+  <h1><%= @recipe.name %></h1>
+  <ul>
+  <li><h5>Difficulty Level: <%= @recipe.difficulty %></h5></li>
+  <br>
+  <li><h5>Prep Time: <%= @recipe.prep_time %></h5></li>
+  <br>
+  <li><h5>Type: <%= @recipe.category %></h5><li>
+  <br>
+  <li><h5>Ingredients: <%= @recipe.ingredients %></h5></li>
+  <br>
+  <li><h5>Instructions: <%= @recipe.instructions %></h5></li>
+  <br>
+  <%= link_to "<< Back to Recipes List", recipes_path %>
+</div>

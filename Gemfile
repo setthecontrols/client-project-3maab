@@ -32,8 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'haml'
+gem 'materialize-sass'
 
-gem 'bootstrap', '~> 4.0.0.alpha6'
 # gem 'autoprefixer-rails'
 
 # Use Capistrano for deployment
