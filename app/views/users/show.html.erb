@@ -9,4 +9,8 @@
         <li><%= link_to recipe.name, recipe_path(recipe) %></li>
       <% end %>
     </ol>
-</div>
+  <% end %>
+
+  <% if current_user && current_user.admin = true %>
+  <% end %>
+  </div>

@@ -1,5 +1,5 @@
 class CreateRecipes < ActiveRecord::Migration[5.0]
-  def change
+ def change
     create_table :recipes do |t|
       t.string :name
       t.string :ingredients
@@ -7,6 +7,7 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
       t.integer :prep_time
       t.string :category
       t.text :instructions
+      t.attachment :image
       t.references :user
 
       t.timestamps
