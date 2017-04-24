@@ -35,6 +35,7 @@ end
     prep_time: Faker::Number.between(10, 25),
     category: category.sample,
     instructions: Faker::Lorem.sentences(4),
+    votes: Faker::Number.between(1, 5),
     image: Faker::LoremPixel.image("300x300"),
     user_id: user.id
     })

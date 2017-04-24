@@ -6,13 +6,6 @@ class Recipe < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
 
-
-
-
-  def self.total
-    ratings.reduce(0) { |sum, rating| sum += rating.value }
-  end
-
   def self.generate_menu
     Recipe.where('created_at = ?', last_thursday).where('created_at -7 ?', last_thursday)
     # Date.beginning_of_week=(:thursday)

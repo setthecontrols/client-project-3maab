@@ -1,5 +1,7 @@
 class RatingsController < ApplicationController
 
+  include RatingsHelper
+
   def index
   end
 
@@ -14,6 +16,9 @@ class RatingsController < ApplicationController
       @rating.save 
       flash.notice = "You're rating is recorded!"
     end
+
+    #initiates the tally vote helper that will update the database
+    tallyvotes
 
     redirect_to "/"
   end
