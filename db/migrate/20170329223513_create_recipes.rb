@@ -7,6 +7,7 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
       t.integer :prep_time
       t.string :category
       t.text :instructions
+      t.decimal :votes
       t.attachment :image
       t.references :user
 
