@@ -30,7 +30,7 @@
     <h4>Appetizers</h4>
     <ul>
       <% @appetizers.each do |appetizer|%>
-      <p><%= link_to appetizer.name, appetizer %></p>
+      <p><%= link_to appetizer.name, appetizer %><%=appetizer.votes%></p>
       <% end %>
       <br>
       <%= link_to "See More", recipes_path(anchor: 'appetizers') %><br><br>
@@ -40,7 +40,7 @@
     <h4>Salads</h4>
     <ul>
       <% @salads.each do |salad|%>
-      <p><%= link_to salad.name, salad %></p>
+      <p><%= link_to salad.name, salad %><%= salad.votes%></p>
       <% end %>
       <br>
       <%= link_to "See More", recipes_path(anchor: 'salads') %><br><br>
