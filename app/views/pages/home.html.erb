@@ -10,27 +10,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body>
-    <div class="center-align">
-      <div class="card-panel">
-        <span class="red-text text-lighten-2"><h1>Welcome to me/nu</h1><br></span>
+        <div id="load-pic">
+        <div class="center-align">
+          <div>
+            <span class="white-text text-lighten-2 welcome-me"><p class="welcome-p">Welcome to me/nu</p></span>
+          </div>
+        </div>
+        <div class="container">
+          <div class="white-text description">
+            <div>
+              <p class="recipes">A crowd-sourced recipe submission site</p>
+              <p class="sign-log">Please sign up and log in to join the community and start voting and sharing recipes.</p>
+              <br>
+            </div>
+              <p class="submissions">Start scrolling to see our latest recipe submissions:
+              </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="left-align">
-        <h5>A crowd-sourced recipe submission site for sharing and voting on recipes.</h5>
-        <p>Please sign up and log in to join the community and start voting and sharing recipes.</p>
-        <br>
-        <br>
-        <h4>See our latest recipe submissions:</h4>
-      </div>
-    </div>
+
+<div class="container">
 
 <div class="row">
   <div class="col s3">
     <h4>Appetizers</h4>
     <ul>
       <% @appetizers.each do |appetizer|%>
-      <p><%= link_to appetizer.name, appetizer %><%=appetizer.votes%></p>
+      <p><%= link_to appetizer.name, appetizer %></p>
       <% end %>
       <br>
       <%= link_to "See More", recipes_path(anchor: 'appetizers') %><br><br>
@@ -40,10 +46,11 @@
     <h4>Salads</h4>
     <ul>
       <% @salads.each do |salad|%>
-      <p><%= link_to salad.name, salad %><%= salad.votes%></p>
+      <p><%= link_to salad.name, salad %></p>
       <% end %>
       <br>
       <%= link_to "See More", recipes_path(anchor: 'salads') %><br><br>
+      </ul>
     </div>
   <div class="col s3">
     <h4>Entrees</h4>
@@ -65,6 +72,7 @@
     <%= link_to "See More", recipes_path(anchor: 'desserts') %><br><br>
   </ul>
   </div>
+</div>
 </div>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
