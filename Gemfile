@@ -9,6 +9,8 @@ gem 'rufus-scheduler', '~> 3.2'
 gem 'hirb'
 gem 'faker'
 gem "paperclip", "~> 5.0.0"
+gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 4.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 # Use postgresql as the database for Active Record
