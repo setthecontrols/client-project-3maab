@@ -252,22 +252,34 @@ img#logo {
 }
 
 .menu-pic {
-  position: absolute;
+  background: url("/assets/menu2.jpg") no-repeat;     
+  background-size: 100% 100%;
+  background-position: center;
   height: 100%;
-  width: 100%;
-  background-image: url("/assets/menu.jpg");
-  background-size: cover !important;
-  -webkit-background-size: cover !important;
-  overflow:hidden;
-  background-position: center center;
-  background-attachment: fixed;
+  position:relative;
+}
+.wrapper{
+  position: fixed;
+  margin-left: auto;
+  width: 80%;
+  height: 100%;
+  left: 10%;
+
+  z-index: 10;
 }
 
-.container .menu-pic{
-  height: 800px;
-  overflow:hidden;
+.menu-menu{
+  margin: 0px, 0px, 0px, -10px;
+  font-family: cursive;
+  font-size: 15px;
 }
 
+.weekly-menu{
+   text-align: center; 
+   text-decoration: underline;
+   padding-top: 70px;
+   font-family: cursive;
+}
 
 
 
