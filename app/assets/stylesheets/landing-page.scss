@@ -281,12 +281,40 @@ img#logo {
    font-family: cursive;
 }
 
+.card { 
+  width:800px;
+  font-family: cursive;
+}
 
 
 
+@media only screen
+and (max-width : 480px) {
+.card { width:100px;}
+}
 
 
+@media only screen
+and (max-width : 767px) {
+.card { width:400px;}
+}
 
+.center-recipe{
+  width:800px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#your-recipe{
+  text-decoration: underline;
+  font-family: cursive;
+}
+
+.welcome-user{
+  font-family: cursive;
+}
 
 
 
