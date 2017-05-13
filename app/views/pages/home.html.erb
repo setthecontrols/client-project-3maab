@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-  <body>
-        <div id="load-pic">
-        <div class="center-align">
-          <div>
-            <span class="white-text text-lighten-2 welcome-me"><p class="welcome-p">Welcome to me/nu</p></span>
-          </div>
-        </div>
-        <div class="container">
-          <div class="white-text description">
-            <div>
-              <p class="recipes">A crowd-sourced recipe submission site</p>
-              <p class="sign-log">Please sign up and log in to join the community and start voting and sharing recipes.</p>
-              <br>
-            </div>
-              <p class="submissions">Start scrolling to see our latest recipe submissions:
-              </p>
-          </div>
-        </div>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <div id="load-pic">
+    <div class="center-align">
+      <div>
+        <span class="white-text text-lighten-2 welcome-me"><p class="welcome-p">Welcome to me/nu</p></span>
       </div>
-
-<div class="container">
-
-<div class="row">
-  <div class="col s3">
-    <h4>Appetizers</h4>
-    <ul>
-      <% @appetizers.each do |appetizer|%>
-      <p><%= link_to appetizer.name, appetizer %></p>
-      <% end %>
-      <br>
-      <%= link_to "See More", recipes_path(anchor: 'appetizers') %><br><br>
-    </ul>
-  </div>
-  <div class="col s3">
-    <h4>Salads</h4>
-    <ul>
-      <% @salads.each do |salad|%>
-      <p><%= link_to salad.name, salad %></p>
-      <% end %>
-      <br>
-      <%= link_to "See More", recipes_path(anchor: 'salads') %><br><br>
-      </ul>
     </div>
-  <div class="col s3">
-    <h4>Entrees</h4>
-      <ul>
-    <% @entrees.each do |entree|%>
-      <p><%= link_to entree.name, entree%></p>
-    <% end %>
-    <br>
-     <%= link_to "See More", recipes_path(anchor: 'entrees') %><br><br>
-  </ul>
+    <div class="container">
+      <div class="white-text description">
+        <div>
+          <p class="recipes">A crowd-sourced recipe submission site</p>
+          <p class="sign-log">Please sign up and log in to join the community and start voting and sharing recipes.</p>
+          <br>
+        </div>
+        <p class="submissions">Start scrolling to see our latest recipe submissions:
+        </p>
+      </div>
+    </div>
   </div>
-  <div class="col s3">
-    <h4>Desserts</h4>
-    <ul>
-    <% @desserts.each do |dessert|%>
-      <p><%= link_to dessert.name, dessert %></p>
-    <% end %>
-    <br>
-    <%= link_to "See More", recipes_path(anchor: 'desserts') %><br><br>
-  </ul>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col s3">
+        <h4>Appetizers</h4>
+        <ul>
+          <% @appetizers.each do |appetizer|%>
+          <p><%= link_to appetizer.name, appetizer %></p>
+          <% end %>
+          <br>
+          <%= link_to "See More", recipes_path(anchor: 'appetizers') %><br><br>
+        </ul>
+      </div>
+      <div class="col s3">
+        <h4>Salads</h4>
+        <ul>
+          <% @salads.each do |salad|%>
+          <p><%= link_to salad.name, salad %></p>
+          <% end %>
+          <br>
+          <%= link_to "See More", recipes_path(anchor: 'salads') %><br><br>
+        </ul>
+      </div>
+      <div class="col s3">
+        <h4>Entrees</h4>
+        <ul>
+          <% @entrees.each do |entree|%>
+          <p><%= link_to entree.name, entree%></p>
+          <% end %>
+          <br>
+          <%= link_to "See More", recipes_path(anchor: 'entrees') %><br><br>
+        </ul>
+      </div>
+      <div class="col s3">
+        <h4>Desserts</h4>
+        <ul>
+          <% @desserts.each do |dessert|%>
+          <p><%= link_to dessert.name, dessert %></p>
+          <% end %>
+          <br>
+          <%= link_to "See More", recipes_path(anchor: 'desserts') %><br><br>
+        </ul>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>

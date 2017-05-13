@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-  <head>
-    <title>me/nu</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body>
-    <nav>
+<head>
+  <title>me/nu</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <nav>
     <div class="nav-wrapper">
       <img id="logo" alt="Icon" src="/assets/menulogo1.png" />
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Menu", menus_path %></li>
         <% if logged_in? == false %>
-          <li><%= link_to "Register", new_user_path %><li>
+        <li><%= link_to "Register", new_user_path %><li>
           <li><%= link_to "Login", new_session_path %><li>
-        <% else %>
-          <li><%= link_to "Profile", user_path(current_user) %></li>
-          <li><%= link_to "Logout", logout_path %></li>
-        <% end %>
-      </ul>
-  </div>
-  </nav>
-    <div>
-      <%= flash.notice %>
-      <%= yield %>
+            <% else %>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
+            <li><%= link_to "Logout", logout_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
+      <div>
+        <%= flash.notice %>
+        <%= yield %>
+      </div>
     </div>
-  </div>
   </body>
-</html>
+  </html>

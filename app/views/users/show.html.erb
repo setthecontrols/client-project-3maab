@@ -4,11 +4,11 @@
   <p>Click <%= link_to 'here', new_recipe_path(@recipe) %> to create a new recipe </p>
 
   <h3>Recipes</h3>
-    <ol>
-      <% @recipes.each do |recipe| %>
-        <li><%= link_to recipe.name, recipe_path(recipe) %></li>
-      <% end %>
-    </ol>
+  <ol>
+    <% @recipes.each do |recipe| %>
+    <li><%= link_to recipe.name, recipe_path(recipe) %></li>
+    <% end %>
+  </ol>
 
 
   <% if current_user && current_user.admin = true %>

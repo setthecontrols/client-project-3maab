@@ -3,43 +3,43 @@
     <h1 class="weekly-menu">Weekly Menu</h1>
 
     <div class="row">
-    <div class="container">
-      <div class="menu-menu">
-        <div class="col s4 offset-s3">
-          <h5>Appetizers</h5>
-          <ul>
-            <% @appetizers.first(5).each do |appetizer| %>
-            <%= appetizer.name %>
-            <% @ratings = appetizer.ratings %>
-            <% @total = @ratings.reduce(0) { |sum, rating| sum += rating.value } %>
-            <% @total %><br>
-            <% end %>
-          </ul>
-          <h5>Salads</h5>
-          <ul>
-            <% @salads.first(5).each do |salad| %>
-            <%= salad.name %><br>
-            <% end %>
-          </ul>
-        </div>
-        <div class="right-side">
-        <div class="col s4">
-          <h5>Entrees</h5>
-          <ul>
-            <% @entrees.first(5).each do |entree| %>
-            <%= entree.name %><br>
-            <% end %>
-          </ul>
-          <h5>Desserts</h5>
-          <ul>
-            <% @desserts.first(5).each do |dessert| %>
-            <%= dessert.name %><br>
-            <% end %>
-          </ul>
-        </div>
+      <div class="container">
+        <div class="menu-menu">
+          <div class="col s4 offset-s3">
+            <h5>Appetizers</h5>
+            <ul>
+              <% @appetizers.first(5).each do |appetizer| %>
+              <%= appetizer.name %>
+              <% @ratings = appetizer.ratings %>
+              <% @total = @ratings.reduce(0) { |sum, rating| sum += rating.value } %>
+              <% @total %><br>
+              <% end %>
+            </ul>
+            <h5>Salads</h5>
+            <ul>
+              <% @salads.first(5).each do |salad| %>
+              <%= salad.name %><br>
+              <% end %>
+            </ul>
+          </div>
+          <div class="right-side">
+            <div class="col s4">
+              <h5>Entrees</h5>
+              <ul>
+                <% @entrees.first(5).each do |entree| %>
+                <%= entree.name %><br>
+                <% end %>
+              </ul>
+              <h5>Desserts</h5>
+              <ul>
+                <% @desserts.first(5).each do |dessert| %>
+                <%= dessert.name %><br>
+                <% end %>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>

@@ -29,7 +29,7 @@ end
 40.times do
   user = User.all.sample
   user.recipes.create({
-    name: Faker::StarWars.character,
+    name: "Recipe-Name",
     ingredients: Faker::Food.ingredient,
     difficulty: Faker::Number.between(1, 10),
     prep_time: Faker::Number.between(10, 25),
