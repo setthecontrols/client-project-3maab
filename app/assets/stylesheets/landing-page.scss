@@ -251,6 +251,22 @@ img#logo {
     left: 20%;
 }
 
+.menu-pic {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/assets/menu.jpg");
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  overflow:hidden;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.container .menu-pic{
+  height: 800px;
+  overflow:hidden;
+}
 
 
 
