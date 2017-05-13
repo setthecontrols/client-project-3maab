@@ -1,26 +1,26 @@
 <div class="container">
-<br>
-<%= image_tag @recipe.image.url(:medium) %>
-<br>
-<h1><%= @recipe.name %></h1>
-<br>
-<p>Difficulty Level (1 being the easiest and 10 being the most difficult):<br> <%= @recipe.difficulty %></p>
-<br>
-<p>Prep Time:<br> <%= @recipe.prep_time %> minutes</p>
-<br>
-<p>Type:<br> <%= @recipe.category %></p>
-<br>
-<p>Ingredients:<br> <%= @recipe.ingredients %></p>
-<br>
-<p>Instructions:<br> <%= @recipe.instructions %></p>
-<br>
+  <br>
+  <%= image_tag @recipe.image.url(:medium) %>
+  <br>
+  <h1><%= @recipe.name %></h1>
+  <br>
+  <p>Difficulty Level (1 being the easiest and 10 being the most difficult):<br> <%= @recipe.difficulty %></p>
+  <br>
+  <p>Prep Time:<br> <%= @recipe.prep_time %> minutes</p>
+  <br>
+  <p>Type:<br> <%= @recipe.category %></p>
+  <br>
+  <p>Ingredients:<br> <%= @recipe.ingredients %></p>
+  <br>
+  <p>Instructions:<br> <%= @recipe.instructions %></p>
+  <br>
 
-<% if logged_in? %>
-<p>Rate this Recipe:</p>
-<%= link_to "YES", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 5), :method => :post %><br>
-<%= link_to "Sure", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 4), :method => :post %><br>
-<%= link_to "Maybe?", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 3), :method => :post %><br>
-<%= link_to "No", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 2), :method => :post %><br>
-<%= link_to "YUCK", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 1), :method => :post %><br><br>
-<% end %>
+  <% if logged_in? %>
+  <p>Rate this Recipe:</p>
+  <%= link_to "YES", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 5), :method => :post %><br>
+  <%= link_to "Sure", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 4), :method => :post %><br>
+  <%= link_to "Maybe?", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 3), :method => :post %><br>
+  <%= link_to "No", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 2), :method => :post %><br>
+  <%= link_to "YUCK", recipe_ratings_path(:user_id => current_user.id, :recipe_id => @recipe.id, :value => 1), :method => :post %><br><br>
+  <% end %>
 </div>
