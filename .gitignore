@@ -1,3 +1,5 @@
 tmp/*
 public/assets/*
 .env
+log/development.log
+db/schema.rb
